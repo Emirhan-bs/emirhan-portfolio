@@ -17,23 +17,25 @@
 
 .about__photo-wrapper img {
   width: 100%;
-    height: 540px;
-    object-fit: cover;
-    border-radius: 16px;
-    border: 1px solid var(--border);
+  height: 540px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--border);
 }
 
 .about__photo-wrapper::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 16px;
   border: 2px solid transparent;
   background: var(--gradient) border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box,
-                linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) padding-box,
-        linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   pointer-events: none;
@@ -61,28 +63,55 @@
 
 .about__stats {
   display: flex;
-  gap: 32px;
+  gap: 16px;
   margin-top: 32px;
+  flex-wrap: wrap;
 }
 
 .about__stat {
+  flex: 1;
+  min-width: 120px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
+.about__stat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient);
+}
+.about__stat:hover {
+  border-color: var(--accent-purple);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15);
+}
 .about__stat-number {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   background: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .about__stat-label {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 768px) {

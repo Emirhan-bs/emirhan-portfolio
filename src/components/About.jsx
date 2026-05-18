@@ -58,10 +58,6 @@ function About() {
                 <p className="about__stat-number">12+</p>
                 <p className="about__stat-label">Technologies</p>
               </div>
-              <div className="about__stat">
-                <p className="about__stat-number">1+</p>
-                <p className="about__stat-label">Years Learning</p>
-              </div>
             </div>
           </div>
 
